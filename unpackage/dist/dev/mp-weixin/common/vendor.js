@@ -754,7 +754,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -7083,7 +7083,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -7104,14 +7104,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -7187,7 +7187,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -7611,9 +7611,9 @@ module.exports = g;
 
 /***/ }),
 /* 4 */
-/*!*************************************************!*\
-  !*** F:/前端项目/抽盒机-多端/Findbox-uni-app/pages.json ***!
-  \*************************************************/
+/*!*****************************************************!*\
+  !*** F:/前端项目/抽盒机-多端/FindBox-uniapp-demo/pages.json ***!
+  \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8518,9 +8518,9 @@ module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.
 
 /***/ }),
 /* 7 */
-/*!******************************************************************!*\
-  !*** F:/前端项目/抽盒机-多端/Findbox-uni-app/pages.json?{"type":"style"} ***!
-  \******************************************************************/
+/*!**********************************************************************!*\
+  !*** F:/前端项目/抽盒机-多端/FindBox-uniapp-demo/pages.json?{"type":"style"} ***!
+  \**********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8529,9 +8529,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 8 */
-/*!*****************************************************************!*\
-  !*** F:/前端项目/抽盒机-多端/Findbox-uni-app/pages.json?{"type":"stat"} ***!
-  \*****************************************************************/
+/*!*********************************************************************!*\
+  !*** F:/前端项目/抽盒机-多端/FindBox-uniapp-demo/pages.json?{"type":"stat"} ***!
+  \*********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8665,9 +8665,9 @@ function normalizeComponent (
 
 /***/ }),
 /* 15 */
-/*!******************************************************!*\
-  !*** F:/前端项目/抽盒机-多端/Findbox-uni-app/filter/index.js ***!
-  \******************************************************/
+/*!**********************************************************!*\
+  !*** F:/前端项目/抽盒机-多端/FindBox-uniapp-demo/filter/index.js ***!
+  \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8683,9 +8683,9 @@ _timeFilter.default);exports.default = _default;
 
 /***/ }),
 /* 16 */
-/*!***************************************************************!*\
-  !*** F:/前端项目/抽盒机-多端/Findbox-uni-app/filter/number-filters.js ***!
-  \***************************************************************/
+/*!*******************************************************************!*\
+  !*** F:/前端项目/抽盒机-多端/FindBox-uniapp-demo/filter/number-filters.js ***!
+  \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8746,9 +8746,9 @@ var _formatMethods = __webpack_require__(/*! @/utils/format-methods */ 17); /**
 
 /***/ }),
 /* 17 */
-/*!**************************************************************!*\
-  !*** F:/前端项目/抽盒机-多端/Findbox-uni-app/utils/format-methods.js ***!
-  \**************************************************************/
+/*!******************************************************************!*\
+  !*** F:/前端项目/抽盒机-多端/FindBox-uniapp-demo/utils/format-methods.js ***!
+  \******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8788,9 +8788,9 @@ function dateFormat(date, format) {
 
 /***/ }),
 /* 18 */
-/*!***************************************************************!*\
-  !*** F:/前端项目/抽盒机-多端/Findbox-uni-app/filter/string-filters.js ***!
-  \***************************************************************/
+/*!*******************************************************************!*\
+  !*** F:/前端项目/抽盒机-多端/FindBox-uniapp-demo/filter/string-filters.js ***!
+  \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8832,9 +8832,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 19 */
-/*!************************************************************!*\
-  !*** F:/前端项目/抽盒机-多端/Findbox-uni-app/filter/time-filter.js ***!
-  \************************************************************/
+/*!****************************************************************!*\
+  !*** F:/前端项目/抽盒机-多端/FindBox-uniapp-demo/filter/time-filter.js ***!
+  \****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8900,9 +8900,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 20 */
-/*!*****************************************************!*\
-  !*** F:/前端项目/抽盒机-多端/Findbox-uni-app/store/index.js ***!
-  \*****************************************************/
+/*!*********************************************************!*\
+  !*** F:/前端项目/抽盒机-多端/FindBox-uniapp-demo/store/index.js ***!
+  \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9877,9 +9877,9 @@ var index_esm = {
 
 /***/ }),
 /* 22 */
-/*!*******************************************************!*\
-  !*** F:/前端项目/抽盒机-多端/Findbox-uni-app/store/actions.js ***!
-  \*******************************************************/
+/*!***********************************************************!*\
+  !*** F:/前端项目/抽盒机-多端/FindBox-uniapp-demo/store/actions.js ***!
+  \***********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9893,9 +9893,9 @@ var setUserInfo = function setUserInfo(_ref, userInfo) {var commit = _ref.commit
 
 /***/ }),
 /* 23 */
-/*!**************************************************************!*\
-  !*** F:/前端项目/抽盒机-多端/Findbox-uni-app/store/mutation-types.js ***!
-  \**************************************************************/
+/*!******************************************************************!*\
+  !*** F:/前端项目/抽盒机-多端/FindBox-uniapp-demo/store/mutation-types.js ***!
+  \******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9906,9 +9906,9 @@ var SET_USERINFO = 'SET_USERINFO';exports.SET_USERINFO = SET_USERINFO;
 
 /***/ }),
 /* 24 */
-/*!*******************************************************!*\
-  !*** F:/前端项目/抽盒机-多端/Findbox-uni-app/store/getters.js ***!
-  \*******************************************************/
+/*!***********************************************************!*\
+  !*** F:/前端项目/抽盒机-多端/FindBox-uniapp-demo/store/getters.js ***!
+  \***********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9918,9 +9918,9 @@ var userInfo = function userInfo(state) {return state.userInfo;};exports.userInf
 
 /***/ }),
 /* 25 */
-/*!*****************************************************!*\
-  !*** F:/前端项目/抽盒机-多端/Findbox-uni-app/store/state.js ***!
-  \*****************************************************/
+/*!*********************************************************!*\
+  !*** F:/前端项目/抽盒机-多端/FindBox-uniapp-demo/store/state.js ***!
+  \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9935,9 +9935,9 @@ state;exports.default = _default;
 
 /***/ }),
 /* 26 */
-/*!*********************************************************!*\
-  !*** F:/前端项目/抽盒机-多端/Findbox-uni-app/store/mutations.js ***!
-  \*********************************************************/
+/*!*************************************************************!*\
+  !*** F:/前端项目/抽盒机-多端/FindBox-uniapp-demo/store/mutations.js ***!
+  \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9985,12 +9985,10 @@ mutaions;exports.default = _default;
 /* 38 */,
 /* 39 */,
 /* 40 */,
-/* 41 */,
-/* 42 */,
-/* 43 */
-/*!********************************************************!*\
-  !*** F:/前端项目/抽盒机-多端/Findbox-uni-app/eventBus/index.js ***!
-  \********************************************************/
+/* 41 */
+/*!************************************************************!*\
+  !*** F:/前端项目/抽盒机-多端/FindBox-uniapp-demo/eventBus/index.js ***!
+  \************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
