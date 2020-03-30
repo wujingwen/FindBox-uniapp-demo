@@ -15,24 +15,24 @@
 ###目录结构
 ```
 
-├─assets        // 存放相关资源，图片、js文件以及样式文件
+├─assets        # 存放相关资源，图片、js文件以及样式文件
 │  ├─images
 │  ├─js
 │  └─styles
-├─eventBus      // 事件中转站，集中处理监听事件，一般用以处理跨页面跨组件的事件通知
-├─filter        // 过滤器相关
-├─pages         // 页面存放
+├─eventBus      # 事件中转站，集中处理监听事件，一般用以处理跨页面跨组件的事件通知
+├─filter        # 过滤器相关
+├─pages         # 页面存放
 │  ├─demo
 │  └─index
-├─static        // 存放静态资源
-├─store         // vuex相关             
-└─utils         // 存放公用方法
+├─static        # 存放静态资源
+├─store         # vuex相关             
+└─utils         # 存放公用方法
 │ App.vue 
-│ main.js       // 入口文件
-│ manifest.json // 配置文件
-│ pages.json    // 页面配置文件
+│ main.js       # 入口文件
+│ manifest.json # 配置文件
+│ pages.json    # 页面配置文件
 │ README.md
-│ uni.scss      // uni-ui样式，可通过修改样式变量更换ui组件风格
+│ uni.scss      # uni-ui样式，可通过修改样式变量更换ui组件风格
 
 ```
 ###vuex调用
